@@ -12,6 +12,8 @@ import { ConnecterComponent } from './connecter/connecter.component';
 import { InscriptionComponent } from './inscription/inscription.component';
 import { FormallerComponent } from './formaller/formaller.component';
 import { FormallerretourComponent } from './formallerretour/formallerretour.component';
+import { RechercheComponent } from './recherche/recherche.component';
+import { ReserverComponent } from './reserver/reserver.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import { FormallerretourComponent } from './formallerretour/formallerretour.comp
     ConnecterComponent,
     InscriptionComponent,
     FormallerComponent,
-    FormallerretourComponent
+    FormallerretourComponent,
+    RechercheComponent,
+    ReserverComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,9 @@
+.borderinscription{
+    height: 50rem;
+    border: none;
+    margin-bottom: 100px;
+}
+.titre{
+    text-align: center;
+    font-family: 'Fraunces', serif;
+}

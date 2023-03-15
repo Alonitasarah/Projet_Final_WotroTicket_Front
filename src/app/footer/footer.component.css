@@ -1,0 +1,8 @@
+.footer{
+    background: url('/assets/autocar2.jpg'), rgba(0, 0, 0, .6)no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-blend-mode: color;
+    height: 300px;
+}

@@ -1,0 +1,25 @@
+.personne{
+    height: 50px;
+    width: 50px;
+}
+.calendrier{
+    height: 50px;
+    width: 50px; 
+}
+.transporteur{
+    height: 50px;
+    width: 50px;
+}
+.pointdepart{
+    height: 50px;
+    width: 50px;
+}
+.pointarriver{
+    height: 50px;
+    width: 50px;
+}
+.recherche{
+    height: 59px;
+
+    width: 100%;
+}

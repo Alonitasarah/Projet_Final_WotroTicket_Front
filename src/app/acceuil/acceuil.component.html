@@ -1,125 +1,132 @@
-<div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+<!-- debut image -->
+<div id="carouselExampleControls" class="carousel slide">
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img src="/assets/autocar1.jpg" height="600px" class="d-block w-100" alt="...">
-    </div>
-    <div class="carousel-item">
-      <img src="/assets/route.jpg"  height="600px" class="d-block w-100" alt="...">
-    </div>
-    <div class="carousel-item">
-      <img src="/assets/autocar2.jpg"  height="600px" class="d-block w-100" alt="...">
+      <img src="/assets/route.jpg " height="600px" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <div class="row mt-5 mb-10 " class="text">
+            <h3 class="text-center">
+              Acheter votre ticket en toute sécurité avec WOTROTICKET et gagnez en temps
+            </h3>
+          </div>
+      </div>
+      </div>
     </div>
   </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
-</div> 
+  <!-- fin image  -->
 
-
-<div class="container mt-5">
-  <div class="row">
-    <div class="col-3"></div>
-    <div class="col-6 text-center">
-      <button type="button" class="btn btn-outline-info me-3" (click)="onactive()">Info</button>
-      <button type="button" class="btn btn-outline-info" (click)="onactive()">Info</button>
+  <!-- debut formulaire -->
+  <div class="container mt-5 mb-5">
+    <div class="row">
+      <div class="col-3"></div>
+      <div class="col-6 text-center">
+        <button type="button" class="btn btn-outline-info me-3 button" (click)="onactive()">Aller</button>
+        <button type="button" class="btn btn-outline-info button" (click)="onactive()">AllerRetour</button>
+      </div>
+      <div class="col-3"></div>
+      <!-- pour poser une condition sur les boutons aller et retour, si aller est active alors desactiver le bouton allerrtour -->
+      <div *ngIf="!linkactive">
+        <app-formaller></app-formaller>
+      </div>
+      <div *ngIf="linkactive">
+        <app-formallerretour></app-formallerretour>
+      </div>
     </div>
-    <div class="col-3"></div>
-    
-    <div *ngIf="!linkactive">
-      <app-formaller></app-formaller>
-    </div>
-   <div *ngIf="linkactive">
-    <app-formallerretour></app-formallerretour>
   </div>
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div class="row mt-5 mb-5">
-  <h3 class="text-center">
-    Acheter votre ticket en toute sécurité avec WOTRO_TICKET et gagnez en temps
-  </h3>
-</div>
+  <!-- fin formulaire -->
 
   <!-- debut des cards -->
-  <div class="container-fluid">
+    <div class="mb-5 bg-light p-5">
 
-    <div class="row">
-      <div class="col-lg-3 col-md-6 col-sm-12 mb-3">
-        <div class="card" style="width: 18rem;">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#" class="card-link">Card link</a>
-              <a href="#" class="card-link">Another link</a>
-            </div>
-        </div>
-
+      <!-- debut text après le formulaire -->
+      <div class="row mt-5 mb-10 " class="text" >
+          <h3 class="text-center"> Utiliser Wotroticket c'est avoir</h3>
       </div>
-      <div class="col-lg-3 col-md-6 col-sm-12 mb-3">
-        <div class="card" style="width: 18rem;">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#" class="card-link">Card link</a>
-              <a href="#" class="card-link">Another link</a>
+      <!-- fin text après le formulaire -->
+
+      <div class="container">
+        <div class="row g-4 py-3 row-cols-1 row-cols-lg-3">
+          <div class="col">
+            <div class="card" style="width: 18rem;">
+              <div class="card-body">
+                <h6 class="card-title">Un gain de temps considérable</h6>
+                <!-- <h6 class="card-subtitle mb-2 text-muted"></h6> -->
+                <p class="card-text">Notre plateforme est disponible 7jours/7 ; 24h/24 ; 365 jours/ an.
+                  Il vous faudra bien 60 secondes pour réserver votre ticket de car. Soi-xan-te secondes!!</p>
+                <!-- <a href="#" class="card-link">Card link</a> -->
+                <a href="#" class="card-link">lire la suite</a>
+              </div>
             </div>
           </div>
-      </div>
-    
-      <div class="col-lg-3 col-md-6 col-sm-12">
-        <div class="card" style="width: 18rem;">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="card-link">Card link</a>
-            <a href="#" class="card-link">Another link</a>
-          </div>
-        </div>
-      </div>
 
-      <div class="col-lg-3 col-md-6 col-sm-12">
-        <div class="card" style="width: 18rem;">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="card-link">Card link</a>
-            <a href="#" class="card-link">Another link</a>
+          <div class="col">
+            <div class="card" style="width: 18rem;">
+              <div class="card-body">
+                <h6 class="card-title">Un payement par mobile money</h6>
+                <!-- <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6> -->
+                <p class="card-text">Plus besoin de cash.
+                  Réglez votre achat de ticket directement sur mobile.
+                  Wotroticket est disponible sur Orange Money, MTN Money et Flooz Money.</p>
+                <!-- <a href="#" class="card-link">Card link</a> -->
+                <a href="#" class="card-link">lire la suite</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card" style="width: 18rem;">
+              <div class="card-body">
+                <h6 class="card-title">Un transporteur</h6>
+                <!-- <h6 class="card-subtitle mb-2 text-muted"></h6> -->
+                <p class="card-text">Pour vous simplifier la vie, nous allons chercher les horaires et  les tarifs des différents transporteurs partenaires.
+                  Vous pouvez donc comparer les horaires de départs et les différents tarifs sans vous déplacer.</p>
+                <!-- <a href="#" class="card-link">Card link</a> -->
+                <a href="#" class="card-link">lire la suite</a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-
   <!-- fin des cards -->
 
+  <!-- debut nos partenaires-->
+<div class="container mb-5">
+  <div id="carouselExample" class="carousel slide">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <div class="row">
+          <div class="col">AVS</div>
+          <div class="col">SBTA</div>
+          <div class="col">ST</div>
+          <div class="col">CTE</div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="row">
+          <div class="col">AVS</div>
+          <div class="col">SBTA</div>
+          <div class="col">ST</div>
+          <div class="col">CTE</div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="row">
+          <div class="col">AVS</div>
+          <div class="col">SBTA</div>
+          <div class="col">ST</div>
+          <div class="col">CTE</div>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+</div>
+<!-- fin nos partenaires -->

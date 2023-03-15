@@ -1,3 +1,9 @@
+import { FooterComponent } from './footer/footer.component';
+import { InscriptionComponent } from './inscription/inscription.component';
+import { AproposComponent } from './apropos/apropos.component';
+import { ContactComponent } from './contact/contact.component';
+import { ConnecterComponent } from './connecter/connecter.component';
+import { RechercheComponent } from './recherche/recherche.component';
 import { FormallerretourComponent } from './formallerretour/formallerretour.component';
 import { FormallerComponent } from './formaller/formaller.component';
 import { AcceuilComponent } from './acceuil/acceuil.component';
@@ -27,6 +33,34 @@ const routes: Routes = [
   component: FormallerretourComponent
 },
 
+{
+  path: 'recherche',
+  component: RechercheComponent
+},
+{
+  path:'contact',
+  component:ContactComponent
+},
+{
+  path:'apropos',
+  component: AproposComponent,
+},
+{
+  path: 'connecter',
+  component: ConnecterComponent
+},
+{
+  path:'inscrire',
+  component:InscriptionComponent
+},
+{
+  path:'footer',
+  component:FooterComponent
+},
+{
+  path:'navbar',
+  component:NavbarComponent
+}
 ];
 
 @NgModule({
