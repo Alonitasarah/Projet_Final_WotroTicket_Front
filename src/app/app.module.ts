@@ -14,6 +14,7 @@ import { FormallerComponent } from './formaller/formaller.component';
 import { FormallerretourComponent } from './formallerretour/formallerretour.component';
 import { RechercheComponent } from './recherche/recherche.component';
 import { ReserverComponent } from './reserver/reserver.component';
+import { GareComponent } from './gare/gare.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { ReserverComponent } from './reserver/reserver.component';
     FormallerretourComponent,
     RechercheComponent,
     ReserverComponent,
+    GareComponent,
   ],
   imports: [
     BrowserModule,

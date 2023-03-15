@@ -10,6 +10,7 @@ import { AcceuilComponent } from './acceuil/acceuil.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { NgModule, Component } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { GareComponent } from './gare/gare.component';
 
 const routes: Routes = [
 // {
@@ -60,6 +61,10 @@ const routes: Routes = [
 {
   path:'navbar',
   component:NavbarComponent
+},
+{
+  path:'gare',
+  component:GareComponent
 }
 ];
 
