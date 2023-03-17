@@ -15,6 +15,7 @@ import { FormallerretourComponent } from './formallerretour/formallerretour.comp
 import { RechercheComponent } from './recherche/recherche.component';
 import { ReserverComponent } from './reserver/reserver.component';
 import { GareComponent } from './gare/gare.component';
+import { HttpClientModule  } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { GareComponent } from './gare/gare.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
