@@ -1,19 +1,107 @@
-<div class="container-fluid mt-5 mb-5">
+<!-- informations du clients -->
+<div class="container-fluid mt-5 mb-5" *ngIf="show">
     <div class="card">
         <div class="row 12 align-items-center">
             <div class="col-4"></div>
             <div class="col-6">
                 <div class="card-body">
+                    <h3>Recapitulatif</h3>
                     <ul>
-                        <li class="list-group-item"></li>
-                        <li class="list-group-item"></li>
-                        <li class="list-group-item"></li>
+                        <li class="list-group-item">Type de voyage: <strong> aller </strong></li>
+                        <li class="list-group-item">Ville de départ: <strong>{{data.villedepart}} </strong></li>
+                        <li class="list-group-item">Ville d'arriver: <strong>{{data.villearriver}} </strong></li>
+                        <li class="list-group-item">nombre de personne: <strong> 3 </strong></li>
+                        <li class="list-group-item">date: <strong> 23-03-2023 </strong></li>
+                        
                     </ul>
                 </div>
-            </div>
-            <div class="col-2 text-center">
-                <div class="btn btn-primary">Reserver</div>
             </div>
         </div>
     </div>
 </div>
+
+<!-- fin information clients -->
+
+
+<!-- les trajets -->
+<div class="container" *ngIf="show">
+    <div class="row mb-2">
+        <div class="col-md-6 mt-5">
+            <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                <div class="col-8 p-4 d-flex flex-column position-static">
+                    <strong class="d-inline-block mb-2 text-primary">06:00:00</strong>
+                    <h3 class="mb-0">Adjamé Mirador</h3>
+                    <div class="mb-1 text-muted">Tarif Normal</div>
+                    
+                    <label for="">5000f</label>
+                    <div class="col-md-12 text-center">
+                        <div class="btn btn-primary" routerLink="/reserver">Reserver</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 mt-5">
+            <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                <div class="col-8 p-4 d-flex flex-column position-static">
+                    <strong class="d-inline-block mb-2 text-primary">08:00:00</strong>
+                    <h3 class="mb-0">Yopougon 1er pont</h3>
+                    <div class="mb-1 text-muted">Tarif Normal</div>
+                
+                    <label for="">5000f</label>
+                    <div class="col-md-12 text-center" >
+                        <div class="btn btn-primary" routerLink="/reserver">Reserver</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 mt-5">
+            <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                <div class="col-8 p-4 d-flex flex-column position-static">
+                    <strong class="d-inline-block mb-2 text-primary">16:00:00</strong>
+                    <h3 class="mb-0">Adjame Mirador</h3>
+                    <div class="mb-1 text-muted">Tarif Normal</div>
+
+                    <label for="">5000f</label>
+                    <div class="col-md-12 text-center">
+                        <div class="btn btn-primary" routerLink="/reserver">Reserver</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 mt-5">
+            <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                <div class="col-8 p-4 d-flex flex-column position-static">
+                    <strong class="d-inline-block mb-2 text-primary">10:00:00</strong>
+                    <h3 class="mb-0">Yopougon 1er pont</h3>
+                    <div class="mb-1 text-muted">Tarif Normal</div>
+                    
+                    <label for="">5000f</label>
+                    <div class="col-md-12 text-center">
+                        <div class="btn btn-primary" routerLink="/reserver">Reserver</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- fin trajets -->
+
+<!-- message d'erreur -->
+
+<div class="container" *ngIf="!show">
+    <div class="row mb-2">
+        <div class="col-md-12 mt-5">
+            <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                <div class="col-8 p-4 d-flex flex-column position-static">
+                    <h3 class="mb-0">Pas de trajet disponible pour votre choix</h3>
+                    <strong class="d-inline-block mb-2 text-primary"><a href="">Effectué une autre recherche</a></strong>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+        <!-- fin message d'erreur -->

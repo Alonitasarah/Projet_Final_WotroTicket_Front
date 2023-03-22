@@ -1,3 +1,4 @@
+import { ReserverComponent } from './reserver/reserver.component';
 import { FooterComponent } from './footer/footer.component';
 import { InscriptionComponent } from './inscription/inscription.component';
 import { AproposComponent } from './apropos/apropos.component';
@@ -65,6 +66,10 @@ const routes: Routes = [
 {
   path:'gare',
   component:GareComponent
+},
+{
+  path:'reserver',
+  component:ReserverComponent
 }
 ];
 

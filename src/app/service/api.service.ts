@@ -19,6 +19,13 @@ export class ApiService {
     })
   };
 
+
+  //methode de recherche
+
+  rechercheTrajet(data:any){
+    return this.http.post(this.rootURL+'/trajet/listtrajetparcompagnie', data);
+  }
+
   // methode pour recupérer les villes 
   selectVille(){
     return this.http.get(this.rootURL+'/ville/list', {
@@ -30,6 +37,10 @@ export class ApiService {
     return this.http.get(this.rootURL+'/compagnie/list', {
       // headers:this.HttpHeaders()
     })
+  }
+
+  post(parameter : Required<{endpoint: string, data : any}>){
+    return this.http.post(`${this.rootURL}${parameter.endpoint}`,parameter.data,{headers : this.HttpHeaders()})
   }
 
 }

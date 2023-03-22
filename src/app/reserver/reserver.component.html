@@ -1,1 +1,83 @@
-<p>reserver works!</p>
+<!-- informations du clients -->
+<div class="container-fluid mt-5 mb-5">
+    <div class="card">
+        <div class="row 12 align-items-center">
+            <div class="col-4"></div>
+            <div class="col-6">
+                <div class="card-body">
+                    <h1>Recapitulatif</h1>
+                    <ul>
+                        <li class="list-group-item">Type de voyage: <strong> aller </strong></li>
+                        <li class="list-group-item">Ville de départ: <strong> abidjan </strong></li>
+                        <li class="list-group-item">Ville d'arriver: <strong> agboville </strong></li>
+                        <li class="list-group-item">nombre de personne: <strong> 3</strong></li>
+                        <li class="list-group-item">date: <strong> 23-03-2023 </strong></li>
+                        <li class="list-group-item"> Prix: <strong> 5000f </strong></li>
+                        <li class="list-group-item"> PrixTotal: <strong> 15000f </strong></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- fin information clients -->
+
+
+<!-- les trajets -->
+<div class="container">
+    <div class="row mb-2">
+        <div class="col-md-12 mt-5">
+            <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                <div class="col-8 p-4 d-flex flex-column position-static">
+                    <strong class="d-inline-block mb-2 text-primary"><h1>Paiement</h1></strong>
+                    <h3 class="mb-0">Choisir un mode paiement</h3><br>
+                    <div class="row" *ngIf="message">
+                        <div class="col-md-12">
+                            <div class="alert alert-success">
+                                Paiment effectué avec succès
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <img src="/assets/logoMTN.jpeg" alt="logoMTN" width="100px" height="100px" (click)="afficher()">
+                        <img src="/assets/logoOrange.jpeg" alt="logoOrange"  width="100px"  height="100px" (click)="afficher()">
+                        <img src="/assets/logoMoov.png" alt="logoMoov"  width="100px"  height="100px"  (click)="afficher()">
+                        <img src="/assets/logoWave.png" alt="logoWave"  width="100px"  height="100px" (click)="afficher()">
+                    </div><br>
+                    <div class="row">
+                        <div class="col-md-8">
+                            <form id="myForm">
+
+                                <div class="card" *ngIf="show">
+                                    <div class="card-header">
+                                        <h5>Effectuer votre paiment</h5>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="form-group">
+                                            <label for="Numero">Nom et Prenoms</label>
+                                            <input type="text" [(ngModel)]="nom" name="nom" class="form-control">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="Numero">Numero de telephone</label>
+                                            <input type="text" [(ngModel)]="numero" name="numero" class="form-control">
+                                        </div>
+                                        
+                                    </div>
+                                    <div class="cad-footer">
+                                        <input  onclick="myFunction()" type="submit" value="Valider paiement" class="btn btn-success" (click)="showMessage()">
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+<!-- fin trajets -->
+<script>
+function myFunction() {
+  document.getElementById("myForm").reset();
+}
+</script>
